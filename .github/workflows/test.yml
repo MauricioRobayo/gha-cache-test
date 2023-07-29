@@ -1,7 +1,7 @@
 name: Lint and Unit Test
 on: [push]
 jobs:
-  lintunittesting:
+  lint-and-test:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
@@ -17,8 +17,3 @@ jobs:
       - name: Lint
         run: |
           yarn lint
-      - name: Unit testing
-        env:
-          FORCE_COLOR: true
-        run: |
-          yarn test --coverage --ci

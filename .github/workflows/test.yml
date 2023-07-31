@@ -14,8 +14,19 @@ jobs:
       - name: Install dependencies
         run: |
           yarn
+  lint:
+    runs-on: ubuntu-latest
+    needs: lint-and-test
+    steps:
       - name: Lint
         run: |
           yarn lint
+  test:
+    runs-on: ubuntu-latest
+    needs: lint-and-test
+    steps:
       - name: test
-        run: sleep 5
+        run: |
+          pwd
+          ls -la
+          sleep 5

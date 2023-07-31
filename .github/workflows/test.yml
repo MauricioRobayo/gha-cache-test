@@ -17,3 +17,5 @@ jobs:
       - name: Lint
         run: |
           yarn lint
+      - name: test
+        run: sleep 5
